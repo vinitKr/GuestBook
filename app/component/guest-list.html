@@ -1,0 +1,10 @@
+
+<b>Guests</b>
+<button ng-click="$ctrl.showAdd = true;">Add Guest</button>
+<br>
+<add-guest ng-if="$ctrl.showAdd" on-add="$ctrl.addGuest(guest)" on-cancel="$ctrl.showAdd = false;"></add-guest>
+
+<guest-detail ng-repeat="guest in $ctrl.guestList" guest="guest" on-delete="$ctrl.deleteGuest(guest)"></guest-detail>
+<hr>
+<button ng-if="$ctrl.pageNumber>1" ng-click="$ctrl.onPrev()">< Prev</button>
+<button ng-if="($ctrl.pageNumber < $ctrl.numberOfPages)" ng-click="$ctrl.onNext()">Next ></button>

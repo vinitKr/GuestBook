@@ -1,0 +1,11 @@
+<hr>
+<b>Add Guest</b>
+<br>
+<div>
+  <b>Name:<span style="color: red">*</span></b><br> <input style="width: 400px;" type="text" ng-model="$ctrl.guest.name"><br>
+  <b>Email:<span style="color: red">*</span></b><br> <input style="width: 400px;" type="text" ng-model="$ctrl.guest.email"><br>
+  <b>Comment:</b><br> <textarea style="width: 400px; height: 80px;" ng-model="$ctrl.guest.comment" ng-keypress="$ctrl.check($event)"></textarea><br>
+  <!-- limit-to="256" -->
+  <button ng-click="$ctrl.add()">Add Guest</button>
+  <button ng-click="$ctrl.cancel()">Cancel</button>
+</div>
